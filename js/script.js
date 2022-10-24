@@ -16,7 +16,7 @@ if (navigator.serviceWorker) {
 }
 
 /**
-  * This function calculates you total salary and deducted.
+ * This function calculates you total salary and deducted.
  */
 function calculate() {
   // input
