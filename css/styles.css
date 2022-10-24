@@ -1,5 +1,5 @@
-/* Created by: Mr. Coxall
-* Created on: Sep 2020
+/* Created by: Ashley Monaghan
+* Created on: Sep 2022
 * This file contains the CSS for index.html
 */
 
@@ -18,22 +18,26 @@
 */
 .mdl-ripple {
   background: #000;
-  opacity: 0.001;
+  opacity: 0.02;
 }
 
 body {
-  background-color: rgb(154 211 232);
+  background-color: #eee1bd;
+}
+
+#right-image {
+  position: absolute;
+  right: 0%;
+  margin: 10px;
 }
 
 p {
-  color: black;
+  color: #000;
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
   font-size: 1.5rem;
-  padding-top: 15pt;
+  padding-top: 5pt;
 }
 
-img {
-  float: right;
-  margin-right: 15px;
+h2 {
+  text-align: center;
 }

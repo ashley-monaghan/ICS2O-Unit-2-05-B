@@ -42,35 +42,63 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
-  <title>My first PWA</title>
+  <title>2-05-B Salary Program</title>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">My first PWA</span>
+        <h2>Salary Program, with JS!</h2>
+        <div class="page-content" style="padding-left: 50px">
+          <h4>Please enter your employment information:</h4>
         </div>
       </header>
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
+        <!-- Simple Textfield for number of hours worked -->
+        <form action="#">
+          <p>Number of Hours Worked:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="number-of-hours"
+            />
+            <label class="mdl-textfield__label" for="number-of-hours"
+              >hours ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Simple Textfield for hourly rate -->
+        <form action="#">
+          <p>Hourly Rate:</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="hourly-rate"
+            />
+            <label class="mdl-textfield__label" for="hourly-rate"
+              >rate ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
         <!-- Raised button with ripple -->
         <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+          onclick="calculate()"
         >
-          Say "Hello, World!"
+          Pay!
         </button>
         <!-- basic text -->
-        <p></p>
-        <div id="hello-world"></div>
+        <br />
+        <div id="answers">
+          <div id="pay"></div>
+          <div id="tax"></div>
+        </div>
       </main>
     </div>
   </body>
